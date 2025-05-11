@@ -51,7 +51,7 @@
                         <!-- End Single Widget -->
                     </div>
                 </div>
-                <p class="copyright-text">
+                <p class="copyright-text text-center">
                     <span>© 2025 Vlmf.</span>Designed and Developed by
                     <a href="javascript:void(0)" rel="nofollow"> Cüneyt Kaya </a>
                 </p>
