@@ -17,14 +17,11 @@
                                 Making the world a better place through constructing elegant
                                 hierarchies.
                             </p>
-                            <p class="copyright-text">
-                                <span>© 2025 Vlmf.</span>Designed and Developed by
-                                <a href="javascript:void(0)" rel="nofollow"> Cüneyt Kaya </a>
-                            </p>
+
                         </div>
                         <!-- End Single Widget -->
                     </div>
-                    <div class="col-lg-2 col-md-6 col-12">
+                    <div class="col-lg-4 col-md-6 col-12">
                         <!-- Single Widget -->
                         <div class="footer-widget f-link">
                             <h5>Solutions</h5>
@@ -33,19 +30,6 @@
                                 <li><a href="javascript:void(0)">Analytics</a></li>
                                 <li><a href="javascript:void(0)">Commerce</a></li>
                                 <li><a href="javascript:void(0)">Insights</a></li>
-                            </ul>
-                        </div>
-                        <!-- End Single Widget -->
-                    </div>
-                    <div class="col-lg-2 col-md-6 col-12">
-                        <!-- Single Widget -->
-                        <div class="footer-widget f-link">
-                            <h5>Support</h5>
-                            <ul>
-                                <li><a href="javascript:void(0)">Pricing</a></li>
-                                <li><a href="javascript:void(0)">Documentation</a></li>
-                                <li><a href="javascript:void(0)">Guides</a></li>
-                                <li><a href="javascript:void(0)">API Status</a></li>
                             </ul>
                         </div>
                         <!-- End Single Widget -->
@@ -67,6 +51,10 @@
                         <!-- End Single Widget -->
                     </div>
                 </div>
+                <p class="copyright-text">
+                    <span>© 2025 Vlmf.</span>Designed and Developed by
+                    <a href="javascript:void(0)" rel="nofollow"> Cüneyt Kaya </a>
+                </p>
             </div>
         </div>
     </div>
