@@ -20,6 +20,7 @@ function vlmf_theme_scripts()
     wp_enqueue_style('bootstrap-css', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), null, 'all');
     wp_enqueue_style('glightbox-css', get_template_directory_uri() . '/assets/css/glightbox.min.css', array(), null, 'all');
     wp_enqueue_style('tiny-slider-css', get_template_directory_uri() . '/assets/css/tiny-slider.css', array(), null, 'all');
+    wp_enqueue_style('lineicons-css', get_template_directory_uri() . '/assets/css/lineicons.css', array(), null, 'all');
     wp_enqueue_style('main-css', get_template_directory_uri() . '/assets/css/main.css', array(), null, 'all');
 
     wp_enqueue_script('custom-js', get_template_directory_uri() . '/assets/js/script.js', array(), false, true);
