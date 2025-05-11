@@ -1,5 +1,16 @@
 <?php
 
+// Tema destekleri
+function vlmf_theme_setup()
+{
+    add_theme_support('custom-logo');
+
+    register_nav_menus(array(
+        'primary_menu' => __('Primary Menu', 'vlmf'),
+    ));
+}
+add_action('after_setup_theme', 'vlmf_theme_setup');
+
 
 function vlmf_theme_scripts()
 {

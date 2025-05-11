@@ -27,9 +27,15 @@
             <div class="row">
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg">
-                        <a class="navbar-brand" href="index.html">
-                            <img src="assets/images/white-logo.svg" alt="Logo" />
-                        </a>
+                        <?php
+                        if (has_custom_logo()) {
+                            the_custom_logo();
+                        } else { ?>
+                            <a href="<?php echo home_url(); ?>">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="Logo" />
+                            </a>
+                        <?php } ?>
+
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNine"
                             aria-controls="navbarNine" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="toggler-icon"></span>
@@ -38,26 +44,14 @@
                         </button>
 
                         <div class="collapse navbar-collapse sub-menu-bar" id="navbarNine">
-                            <ul class="navbar-nav me-auto">
-                                <li class="nav-item">
-                                    <a class="page-scroll active" href="#hero-area">Homes</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="page-scroll" href="#services">Services</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="page-scroll" href="#portfolio">Portfolio</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="page-scroll" href="#pricing">Pricing</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="page-scroll" href="#team">Team</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="page-scroll" href="#contact">Contact</a>
-                                </li>
-                            </ul>
+                            <?php
+                            wp_nav_menu(array(
+                                'theme_location' => 'primary_menu',
+                                'container' => false,
+                                'menu_class' => 'navbar-nav me-auto',
+                                'fallback_cb' => false
+                            ));
+                            ?>
                         </div>
 
                         <div class="navbar-btn d-none d-lg-inline-block">
