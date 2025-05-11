@@ -442,7 +442,7 @@ p {
 .navbar-area.navbar-nine .navbar .navbar-toggler .toggler-icon {
   width: 30px;
   height: 2px;
-  background-color: var(--white);
+  background-color: var(--black);
   margin: 5px 0;
   display: block;
   position: relative;
