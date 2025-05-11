@@ -82,15 +82,11 @@
             </div>
             <p class="text">Lorem ipsum dolor sit amet adipisicing elit. Sapiente fuga nisi rerum iusto intro.</p>
             <!-- logo -->
-            <div class="sidebar-menu">
-                <h5 class="menu-title">Quick Links</h5>
-                <ul>
-                    <li><a href="javascript:void(0)">About Us</a></li>
-                    <li><a href="javascript:void(0)">Our Team</a></li>
-                    <li><a href="javascript:void(0)">Latest News</a></li>
-                    <li><a href="javascript:void(0)">Contact Us</a></li>
-                </ul>
-            </div>
+            <?php if (is_active_sidebar('sidebar-left')) : ?>
+                <div class="sidebar-menu">
+                    <?php dynamic_sidebar('sidebar-left'); ?>
+                </div>
+            <?php endif; ?>
             <!-- menu -->
             <div class="sidebar-social align-items-center justify-content-center">
                 <h5 class="social-title">Follow Us On</h5>

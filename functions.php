@@ -51,3 +51,18 @@ function vlmf_add_menu_link_class($atts, $item, $args)
     return $atts;
 }
 add_filter('nav_menu_link_attributes', 'vlmf_add_menu_link_class', 10, 3);
+
+// Sidebar alanı tanımı
+function vlmf_widgets_init()
+{
+    register_sidebar(array(
+        'name'          => __('Left Sidebar', 'vlmf'),
+        'id'            => 'sidebar-left',
+        'description'   => __('Bu alan sol sidebar için kullanılır.', 'vlmf'),
+        'before_widget' => '<div class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h5 class="widget-title">',
+        'after_title'   => '</h5>',
+    ));
+}
+add_action('widgets_init', 'vlmf_widgets_init');
