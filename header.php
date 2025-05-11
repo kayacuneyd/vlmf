@@ -10,27 +10,12 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg" />
+    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.svg" type="image/svg" />
 
     <!--====== Title ======-->
-    <title>Business | Bootstrap 5 Business Template</title>
+    <title><?php bloginfo('name'); ?> | <?php is_front_page() ? bloginfo('description') : wp_title(); ?></title>
 
-    <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="../assets/images/favicon.svg" type="image/svg" />
-
-    <!--====== Bootstrap css ======-->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-
-    <!--====== Line Icons css ======-->
-    <link rel="stylesheet" href="assets/css/lineicons.css" />
-
-    <!--====== Tiny Slider css ======-->
-    <link rel="stylesheet" href="assets/css/tiny-slider.css" />
-
-    <!--====== gLightBox css ======-->
-    <link rel="stylesheet" href="assets/css/glightbox.min.css" />
-
-    <link rel="stylesheet" href="style.css" />
+    <?php wp_head(); ?>
 </head>
 
 <body>
