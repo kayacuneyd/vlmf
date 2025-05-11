@@ -411,7 +411,7 @@ p {
 
 /*===== NAVBAR NINE =====*/
 .navbar-area.navbar-nine {
-  background: var(--primary);
+  background: var(--light-3);
   padding: 10px 0;
   position: absolute;
   left: 0;
@@ -923,7 +923,7 @@ p {
 .header-eight {
   position: relative;
   padding:160px 0 100px 0;
-  background: var(--primary-light);
+  background: var(--primary);
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .header-eight {
