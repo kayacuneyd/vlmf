@@ -31,3 +31,22 @@ function vlmf_theme_scripts()
     wp_enqueue_script('main-js', get_template_directory_uri() . '/assets/js/main.js', array(), null, true);
 }
 add_action('wp_enqueue_scripts', 'vlmf_theme_scripts');
+
+// Bootstrap classes for nav menu items
+function vlmf_add_menu_item_class($classes, $item, $args)
+{
+    if ($args->theme_location === 'primary_menu') {
+        $classes[] = 'nav-item';
+    }
+    return $classes;
+}
+add_filter('nav_menu_css_class', 'vlmf_add_menu_item_class', 10, 3);
+
+function vlmf_add_menu_link_class($atts, $item, $args)
+{
+    if ($args->theme_location === 'primary_menu') {
+        $atts['class'] = 'page-scroll nav-link';
+    }
+    return $atts;
+}
+add_filter('nav_menu_link_attributes', 'vlmf_add_menu_link_class', 10, 3);

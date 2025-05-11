@@ -47,7 +47,9 @@
                             <?php
                             wp_nav_menu(array(
                                 'theme_location' => 'primary_menu',
-                                'container' => false,
+                                'container' => 'div',
+                                'container_class' => 'collapse navbar-collapse sub-menu-bar',
+                                'container_id' => 'navbarNine',
                                 'menu_class' => 'navbar-nav me-auto',
                                 'fallback_cb' => false
                             ));
