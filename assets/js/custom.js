@@ -1,3 +1,5 @@
+console.log("custom.js başarıyla yüklendi!");
+
 //===== close navbar-collapse when a  clicked
 let navbarTogglerNine = document.querySelector(".navbar-nine .navbar-toggler");
 navbarTogglerNine.addEventListener("click", function () {
