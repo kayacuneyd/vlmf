@@ -499,7 +499,7 @@ p {
   display: flex;
   align-items: center;
   padding: 11px 16px;
-  color: var(--white);
+  color: var(--black);
   text-transform: capitalize;
   position: relative;
   border-radius: 5px;
