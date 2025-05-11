@@ -9,8 +9,8 @@
                         <!-- Single Widget -->
                         <div class="footer-widget f-about">
                             <div class="logo">
-                                <a href="index.html">
-                                    <img src="assets/images/logo.svg" alt="#" class="img-fluid" />
+                                <a href="<?php echo home_url(); ?>">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="#" class="img-fluid" />
                                 </a>
                             </div>
                             <p>
@@ -76,7 +76,7 @@
 
 <div class="made-in-ayroui mt-4">
     <a href="https://ayroui.com" target="_blank" rel="nofollow">
-        <img style="width:220px" src="assets/images/ayroui.svg">
+        <img style="width:220px" src="<?php echo get_template_directory_uri(); ?>/assets/images/ayroui.svg">
     </a>
 </div>
 
@@ -84,13 +84,6 @@
     <i class="lni lni-chevron-up"></i>
 </a>
 
-<!--====== js ======-->
-<script src="assets/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/glightbox.min.js"></script>
-<script src="assets/js/main.js"></script>
-<script src="assets/js/tiny-slider.js"></script>
-
-<script src="assets/js/custom.js"></script>
 <?php wp_footer(); ?>
 </body>
 
