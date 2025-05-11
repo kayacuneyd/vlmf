@@ -2435,3 +2435,13 @@ p {
   color: var(--white);
   background-color: var(--primary-dark);
 }
+
+/*==========================================
+custom css
+=============================================*/
+
+.custom-logo {
+  max-height: 100px; 
+  height: auto;
+  width: auto;
+}
