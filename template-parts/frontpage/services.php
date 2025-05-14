@@ -8,106 +8,40 @@
             <div class="row">
                 <div class="col-12">
                     <div class="content">
-                        <h6>Services</h6>
-                        <h2 class="fw-bold">Our Best Services</h2>
-                        <p>
-                            There are many variations of passages of Lorem Ipsum available,
-                            but the majority have suffered alteration in some form.
-                        </p>
+                        <h6><?php the_field('services_subtitle'); ?></h6>
+                        <h2 class="fw-bold"><?php the_field('services_title'); ?></h2>
+                        <p><?php the_field('services_description'); ?></p>
                     </div>
                 </div>
             </div>
-            <!-- row -->
         </div>
-        <!-- container -->
     </div>
     <!--======  End Section Title Five ======-->
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 col-md-6">
-                <div class="single-services">
-                    <div class="service-icon">
-                        <i class="lni lni-capsule"></i>
+            <?php
+            $services_query = new WP_Query(array(
+                'post_type' => 'service',
+                'posts_per_page' => 6
+            ));
+            if ($services_query->have_posts()) :
+                while ($services_query->have_posts()) : $services_query->the_post();
+                    $icon = get_field('service_icon');
+            ?>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-services">
+                            <div class="service-icon">
+                                <i class="<?php echo esc_attr($icon); ?>"></i>
+                            </div>
+                            <div class="service-content">
+                                <h4><?php the_title(); ?></h4>
+                                <p><?php the_content(); ?></p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="service-content">
-                        <h4>Refreshing Design</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy
-                            eirmod tempor ividunt labor dolore magna.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-services">
-                    <div class="service-icon">
-                        <i class="lni lni-bootstrap"></i>
-                    </div>
-                    <div class="service-content">
-                        <h4>Solid Bootstrap 5</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy
-                            eirmod tempor ividunt labor dolore magna.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-services">
-                    <div class="service-icon">
-                        <i class="lni lni-shortcode"></i>
-                    </div>
-                    <div class="service-content">
-                        <h4>100+ Components</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy
-                            eirmod tempor ividunt labor dolore magna.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-services">
-                    <div class="service-icon">
-                        <i class="lni lni-dashboard"></i>
-                    </div>
-                    <div class="service-content">
-                        <h4>Speed Optimized</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy
-                            eirmod tempor ividunt labor dolore magna.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-services">
-                    <div class="service-icon">
-                        <i class="lni lni-layers"></i>
-                    </div>
-                    <div class="service-content">
-                        <h4>Fully Customizable</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy
-                            eirmod tempor ividunt labor dolore magna.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-services">
-                    <div class="service-icon">
-                        <i class="lni lni-reload"></i>
-                    </div>
-                    <div class="service-content">
-                        <h4>Regular Updates</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy
-                            eirmod tempor ividunt labor dolore magna.
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <?php endwhile;
+                wp_reset_postdata();
+            endif; ?>
         </div>
     </div>
 </section>

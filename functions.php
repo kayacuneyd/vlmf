@@ -65,3 +65,19 @@ function vlmf_widgets_init()
     ));
 }
 add_action('widgets_init', 'vlmf_widgets_init');
+
+function register_service_post_type()
+{
+    register_post_type('service', array(
+        'labels' => array(
+            'name' => __('Services'),
+            'singular_name' => __('Service')
+        ),
+        'public' => true,
+        'has_archive' => false,
+        'menu_icon' => 'dashicons-hammer',
+        'supports' => array('title', 'editor'),
+        'show_in_rest' => true,
+    ));
+}
+add_action('init', 'register_service_post_type');
