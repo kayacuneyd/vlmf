@@ -13,9 +13,9 @@
                                     <i class="lni lni-phone"></i>
                                 </div>
                                 <div class="contact-content">
-                                    <h4>Contact</h4>
-                                    <p>0984537278623</p>
-                                    <p>yourmail@gmail.com</p>
+                                    <h4><?php the_field('contact_title'); ?></h4>
+                                    <p><?php the_field('contact_phone'); ?></p>
+                                    <p><?php the_field('contact_email'); ?></p>
                                 </div>
                             </div>
                         </div>
@@ -25,9 +25,9 @@
                                     <i class="lni lni-map-marker"></i>
                                 </div>
                                 <div class="contact-content">
-                                    <h4>Address</h4>
-                                    <p>175 5th Ave, New York, NY 10010</p>
-                                    <p>United States</p>
+                                    <h4><?php the_field('address_title'); ?></h4>
+                                    <p><?php the_field('address_line1'); ?></p>
+                                    <p><?php the_field('address_line2'); ?></p>
                                 </div>
                             </div>
                         </div>
@@ -37,9 +37,9 @@
                                     <i class="lni lni-alarm-clock"></i>
                                 </div>
                                 <div class="contact-content">
-                                    <h4>Schedule</h4>
-                                    <p>24 Hours / 7 Days Open</p>
-                                    <p>Office time: 10 AM - 5:30 PM</p>
+                                    <h4><?php the_field('schedule_title'); ?></h4>
+                                    <p><?php the_field('schedule_line1'); ?></p>
+                                    <p><?php the_field('schedule_line2'); ?></p>
                                 </div>
                             </div>
                         </div>
@@ -62,38 +62,7 @@
                             </div>
                         </div>
                     </div>
-                    <form action="#" class="contact-form">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <input type="text" name="name" id="name" placeholder="Name" required />
-                            </div>
-                            <div class="col-md-6">
-                                <input type="email" name="email" id="email" placeholder="Email" required />
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <input type="text" name="phone" id="phone" placeholder="Phone" required />
-                            </div>
-                            <div class="col-md-6">
-                                <input type="text" name="subject" id="email" placeholder="Subject" required />
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <textarea name="message" id="message" placeholder="Type Message" rows="5"></textarea>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="button text-center rounded-buttons">
-                                    <button type="submit" class="btn primary-btn rounded-full">
-                                        Send Message
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
+                    <?php echo do_shortcode('[vlmf_contact_form type="full"]'); ?>
                 </div>
             </div>
         </div>
