@@ -81,3 +81,62 @@ function register_service_post_type()
     ));
 }
 add_action('init', 'register_service_post_type');
+
+if (function_exists('acf_add_options_page')) {
+    acf_add_options_page(array(
+        'page_title' => 'Tema Ayarları',
+        'menu_title' => 'Tema Ayarları',
+        'menu_slug'  => 'theme-settings',
+        'capability' => 'edit_posts',
+        'redirect'   => false
+    ));
+}
+
+// Footer widget alanı tanımı
+function vlmf_register_footer_widget()
+{
+    register_sidebar(array(
+        'name'          => __('Footer Alanı', 'vlmf'),
+        'id'            => 'footer-widget',
+        'description'   => __('Footer için bileşen alanı.', 'vlmf'),
+        'before_widget' => '<div class="footer-widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h5 class="widget-title">',
+        'after_title'   => '</h5>',
+    ));
+}
+
+add_action('widgets_init', 'vlmf_register_footer_widget');
+
+// Footer kolon widget alanları tanımı
+function vlmf_register_footer_columns()
+{
+    register_sidebar(array(
+        'name'          => __('Footer Kolon 1', 'vlmf'),
+        'id'            => 'footer-col-1',
+        'description'   => __('Footer birinci sütun', 'vlmf'),
+        'before_widget' => '<div class="footer-widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h5 class="widget-title">',
+        'after_title'   => '</h5>',
+    ));
+    register_sidebar(array(
+        'name'          => __('Footer Kolon 2', 'vlmf'),
+        'id'            => 'footer-col-2',
+        'description'   => __('Footer ikinci sütun', 'vlmf'),
+        'before_widget' => '<div class="footer-widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h5 class="widget-title">',
+        'after_title'   => '</h5>',
+    ));
+    register_sidebar(array(
+        'name'          => __('Footer Kolon 3', 'vlmf'),
+        'id'            => 'footer-col-3',
+        'description'   => __('Footer üçüncü sütun', 'vlmf'),
+        'before_widget' => '<div class="footer-widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h5 class="widget-title">',
+        'after_title'   => '</h5>',
+    ));
+}
+add_action('widgets_init', 'vlmf_register_footer_columns');

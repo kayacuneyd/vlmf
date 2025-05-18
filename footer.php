@@ -6,54 +6,23 @@
             <div class="inner-content">
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-12">
-                        <!-- Single Widget -->
-                        <div class="footer-widget f-about">
-                            <div class="logo">
-                                <a href="<?php echo home_url(); ?>">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="#" class="img-fluid" />
-                                </a>
-                            </div>
-                            <p>
-                                Making the world a better place through constructing elegant
-                                hierarchies.
-                            </p>
-
-                        </div>
-                        <!-- End Single Widget -->
+                        <?php if (is_active_sidebar('footer-col-1')) : ?>
+                            <?php dynamic_sidebar('footer-col-1'); ?>
+                        <?php endif; ?>
                     </div>
                     <div class="col-lg-4 col-md-6 col-12">
-                        <!-- Single Widget -->
-                        <div class="footer-widget f-link">
-                            <h5>Solutions</h5>
-                            <ul>
-                                <li><a href="javascript:void(0)">Marketing</a></li>
-                                <li><a href="javascript:void(0)">Analytics</a></li>
-                                <li><a href="javascript:void(0)">Commerce</a></li>
-                                <li><a href="javascript:void(0)">Insights</a></li>
-                            </ul>
-                        </div>
-                        <!-- End Single Widget -->
+                        <?php if (is_active_sidebar('footer-col-2')) : ?>
+                            <?php dynamic_sidebar('footer-col-2'); ?>
+                        <?php endif; ?>
                     </div>
                     <div class="col-lg-4 col-md-6 col-12">
-                        <!-- Single Widget -->
-                        <div class="footer-widget newsletter">
-                            <h5>Subscribe</h5>
-                            <p>Subscribe to our newsletter for the latest updates</p>
-                            <form action="#" method="get" target="_blank" class="newsletter-form">
-                                <input name="EMAIL" placeholder="Email address" required="required" type="email" />
-                                <div class="button">
-                                    <button class="sub-btn">
-                                        <i class="lni lni-envelope"></i>
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                        <!-- End Single Widget -->
+                        <?php if (is_active_sidebar('footer-col-3')) : ?>
+                            <?php dynamic_sidebar('footer-col-3'); ?>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <p class="copyright-text text-center my-2">
-                    <span>© 2025 Vlmf.</span>Designed and Developed by
-                    <a href="javascript:void(0)" rel="nofollow"> Cüneyt Kaya </a>
+                    <?php the_field('footer_copyright', 'option'); ?>
                 </p>
             </div>
         </div>
