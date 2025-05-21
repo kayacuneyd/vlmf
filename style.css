@@ -384,7 +384,7 @@ p {
   color: var(--dark-3);
 }
 
-.made-in-ayroui{
+.made-by-ck{
   position: fixed;
   left: 5px;
   bottom: 5px;
@@ -393,7 +393,7 @@ p {
   -moz-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
-.made-in-ayroui:hover{
+.made-by-ck:hover{
   transform: translateY(-5px);
 }
 

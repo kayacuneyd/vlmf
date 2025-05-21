@@ -31,9 +31,9 @@
 </footer>
 <!--/ End Footer Area -->
 
-<div class="made-in-ayroui mt-4">
-    <a href="https://ayroui.com" target="_blank" rel="nofollow">
-        <img style="width:220px" src="<?php echo get_template_directory_uri(); ?>/assets/images/ayroui.svg">
+<div class="made-by-ck mt-4">
+    <a href="https://kayacuneyt.com" target="_blank" rel="nofollow">
+        <img style="width:220px" src="https://vlmf.de/wp-content/uploads/2025/05/built-by-Cuneyt-Kaya.svg">
     </a>
 </div>
 
