@@ -33,7 +33,7 @@
 
 <div class="made-by-ck mt-4">
     <a href="https://kayacuneyt.com" target="_blank" rel="nofollow">
-        <img style="width:220px" src="https://vlmf.de/wp-content/uploads/2025/05/built-by-Cuneyt-Kaya.svg">
+        <img style="width:150px; border-radius: 10px; padding: 5px;" src="https://vlmf.de/wp-content/uploads/2025/05/built-by-Cuneyt-Kaya.svg">
     </a>
 </div>
 
