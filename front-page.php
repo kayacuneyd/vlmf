@@ -1,8 +1,7 @@
 <?php
 get_header();
-?>
+get_template_part('template-parts/frontpage/hero'); ?>
 
-<?php get_template_part('template-parts/frontpage/hero'); ?>
 <?php get_template_part('template-parts/frontpage/about'); ?>
 <?php get_template_part('template-parts/frontpage/services'); ?>
 <!--?php get_template_part('template-parts/frontpage/team'); ?-->
