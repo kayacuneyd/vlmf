@@ -3,7 +3,7 @@
 Template Name: Datenschutz
 */
 get_header(); ?>
-<section>
+<section class="header-eight">
     <article class="page-content">
         <div class="container">
             <div class="row">
