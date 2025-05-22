@@ -78,9 +78,19 @@
         </div>
         <div class="sidebar-content">
             <div class="sidebar-logo">
-                <a href="index.html"><img src="assets/images/logo.svg" alt="Logo" /></a>
+                <?php if (has_custom_logo()) {
+                    the_custom_logo();
+                } else { ?>
+                    <a href="<?php echo home_url(); ?>">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="Logo" />
+                    </a>
+                <?php } ?>
             </div>
-            <p class="text">Lorem ipsum dolor sit amet adipisicing elit. Sapiente fuga nisi rerum iusto intro.</p>
+            <?php if (is_active_sidebar('sidebar-description')) : ?>
+                <div class="sidebar-description">
+                    <?php dynamic_sidebar('sidebar-description'); ?>
+                </div>
+            <?php endif; ?>
             <!-- logo -->
             <?php if (is_active_sidebar('sidebar-left')) : ?>
                 <div class="sidebar-menu">
@@ -90,20 +100,9 @@
             <!-- menu -->
             <div class="sidebar-social align-items-center justify-content-center">
                 <h5 class="social-title">Follow Us On</h5>
-                <ul>
-                    <li>
-                        <a href="javascript:void(0)"><i class="lni lni-facebook-filled"></i></a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)"><i class="lni lni-linkedin-original"></i></a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)"><i class="lni lni-youtube"></i></a>
-                    </li>
-                </ul>
+                <?php if (is_active_sidebar('sidebar-social')) : ?>
+                    <?php dynamic_sidebar('sidebar-social'); ?>
+                <?php endif; ?>
             </div>
             <!-- sidebar social -->
         </div>

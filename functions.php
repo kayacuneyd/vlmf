@@ -63,6 +63,26 @@ function vlmf_widgets_init()
         'before_title'  => '<h5 class="widget-title">',
         'after_title'   => '</h5>',
     ));
+
+    register_sidebar(array(
+        'name'          => __('Sidebar Açıklama', 'vlmf'),
+        'id'            => 'sidebar-description',
+        'description'   => __('Sidebar metni için widget alanı.', 'vlmf'),
+        'before_widget' => '<div class="sidebar-description-widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '',
+        'after_title'   => ''
+    ));
+
+    register_sidebar(array(
+        'name'          => __('Sidebar Sosyal Medya', 'vlmf'),
+        'id'            => 'sidebar-social',
+        'description'   => __('Sidebar sosyal medya ikonları için widget alanı.', 'vlmf'),
+        'before_widget' => '<div class="sidebar-social-widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h5 class="widget-title">',
+        'after_title'   => '</h5>'
+    ));
 }
 add_action('widgets_init', 'vlmf_widgets_init');
 
