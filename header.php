@@ -99,7 +99,7 @@
             <?php endif; ?>
             <!-- menu -->
             <div class="sidebar-social align-items-center justify-content-center">
-                <h5 class="social-title">Follow Us On</h5>
+                <h5 class="social-title">Follow Us on Social Media</h5>
                 <?php if (is_active_sidebar('sidebar-social')) : ?>
                     <?php dynamic_sidebar('sidebar-social'); ?>
                 <?php endif; ?>
