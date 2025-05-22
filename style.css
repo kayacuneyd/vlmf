@@ -2446,3 +2446,22 @@ custom css
   height: auto;
   width: auto;
 }
+
+.sidebar-social {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 10px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.sidebar-social li a {
+  font-size: 20px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.sidebar-social li a:hover {
+  color: #007bff;
+}
