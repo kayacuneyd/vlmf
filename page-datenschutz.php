@@ -9,9 +9,7 @@ get_header(); ?>
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-12">
                     <div class="content-area">
-                        <h1>DATENSCHUTZ SAYFASI</h1>
-                        <h1>DATENSCHUTZ SAYFASI</h1>
-                        <h1>DATENSCHUTZ SAYFASI</h1>
+                        <?php the_content(); ?>
 
                     </div>
                 </div>
